@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth scroll-p-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taller artesanal de muebles de madera. Piezas trabajadas con precisión y tradición familiar.">
+    <title>Carpintería Vereau</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <meta property="og:title" content="Carpintería Vereau">
+    <meta property="og:description" content="Taller artesanal de muebles de madera. Piezas trabajadas con precisión y tradición familiar.">
+    <meta property="og:image" content="img/logo.svg"> 
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <header id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden" style="background-color: var(--bg-header); color: var(--texto-claro);">
+        <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('img/fondo-header.avif');"></div>
+        <div class="relative z-10">
+            <img src="img/logo.svg" alt="Logo" class="w-48 md:w-64 mx-auto mb-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold">
+                <span data-key="titulo_carpinteria">Carpintería</span>
+                <span class="text-red-600 text-5xl md:text-7xl lg:text-8xl font-black italic">"Vereau"</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-2" data-key="subtitulo_header">Taller artesanal de muebles de madera</h2>
+            <p class="max-w-2xl mx-auto text-base md:text-lg mt-4 text-gray-300" data-key="desc_header">Fabricamos muebles para sala, comedor y dormitorio. Cada pieza trabajada con precisión y tradición familiar en San Ignacio.</p>
+        </div>
+    </header>
+
+    <nav id="menu-principal" class="nav-oculto fixed top-0 left-0 right-0 z-50 bg-gray-900 text-white border-b-4 border-red-600 shadow-md px-3 py-2.5 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 min-w-0">
+            <a href="#inicio" id="logo-nav" class="nav-logo" aria-label="Volver al inicio">
+                <img src="img/logo.svg" alt="Logo de Carpintería Vereau" class="h-8 w-8 md:h-9 md:w-9 object-contain">
+            </a>
+            <button id="btn-menu" class="block lg:hidden text-2xl focus:outline-none flex-shrink-0" aria-label="Abrir menú" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="nav-enlaces" class="w-full lg:flex lg:items-center lg:space-x-4 lg:flex-row mt-2 lg:mt-0">
+            <a href="#inicio" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_inicio">Inicio</a>
+            <a href="#nosotros" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_nosotros">Nosotros</a>
+            <a href="#catalogo" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_catalogo">Catálogo</a>
+            <a href="#testimonios" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_testimonios">Testimonios</a>
+            <a href="#contacto" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_contacto">Contacto</a>
+            <a href="#taller" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_taller">Taller</a>
+            <a href="#" id="btn-login" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_login">Login</a>
+            <a href="#" id="btn-compartir" class="block py-2 px-3 hover:text-red-400 transition" data-key="nav_compartir">Compartir</a>
+        </div>
+        <div id="contenedor-controles" class="flex items-center gap-2 ml-auto">
+            <a href="#" id="btn-oscuro" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition" aria-label="Cambiar tema" title="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </a>
+            <select id="selector-idioma" class="bg-gray-800 text-white border border-gray-600 rounded px-2 py-1 text-sm" aria-label="Seleccionar idioma">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">INGLÉS</option>
+                <option value="pt">PORTUGUÉS</option>
+            </select>
+        </div>
+    </nav>
+
+    <main class="bg-sitio text-oscuro transition-colors duration-300">
+        <section id="nosotros" class="max-w-6xl mx-auto px-4 py-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold border-b-4 border-red-600 inline-block pb-2 mb-4" data-key="tit_nosotros">Sobre Nosotros</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center mt-6">
+                <div class="text-left lg:text-center">
+                    <p class="text-lg text-parrafo max-w-3xl mx-auto" data-key="desc_nosotros">Somos una carpintería familiar con más de 20 años de experiencia en la elaboración de muebles de madera en San Ignacio. Lo que comenzó como un pequeño taller de barrio se ha convertido en un referente de dedicación y excelencia. Trabajamos cada pieza con técnicas artesanales combinadas con precisión moderna, seleccionando maderas de primera calidad para garantizar máxima durabilidad y un acabado estético inmejorable. Nuestro mayor compromiso es escuchar tus necesidades y transformar tus ideas en muebles únicos y funcionales que brinden calidez a tu hogar por generaciones.</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/casa-taller.jpeg" alt="Casa taller de carpintería Vereau" class="w-full max-w-md rounded-xl shadow-lg object-cover h-72">
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="max-w-7xl mx-auto px-4 py-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center border-b-4 border-red-600 inline-block pb-2 mb-6 w-full" data-key="tit_catalogo">Nuestros Muebles</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/mesa.png" alt="Mesa" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_mesa">Mesa</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_mesa_desc">Mesa de diseño clásico y estructura robusta. Ideal para reuniones familiares o como amplio espacio de trabajo, destacando la veta natural de la madera.</p>
+                        <button type="button" onclick="abrirCotizador('Mesa')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/escritorio.png" alt="Escritorio" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_escritorio">Escritorio</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_escritorio_desc">Escritorio funcional con tres cajones laterales. Perfecto para optimizar tu espacio de estudio o trabajo con un toque de elegancia artesanal.</p>
+                        <button type="button" onclick="abrirCotizador('Escritorio')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/puerta.png" alt="Puerta" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_puerta">Puerta</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_puerta_desc">Puerta de madera maciza con paneles clásicos y detalles superiores en vidrio. Brinda seguridad, aislamiento y un recibimiento cálido a tu hogar.</p>
+                        <button type="button" onclick="abrirCotizador('Puerta')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/vitrina.png" alt="Vitrina" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_vitrina">Vitrina</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_vitrina_desc">Elegante vitrina con puertas de cristal y estantes interiores. Diseñada para exhibir y proteger tu vajilla, libros o colecciones más preciadas.</p>
+                        <button type="button" onclick="abrirCotizador('Vitrina')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/comoda.png" alt="Cómoda" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_comoda">Cómoda</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_comoda_desc">Práctico mueble organizador con amplios cajones superiores y puertas inferiores. Combina gran capacidad de almacenaje con un acabado refinado.</p>
+                        <button type="button" onclick="abrirCotizador('Cómoda')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden transition hover:shadow-xl hover:-translate-y-1 w-full max-w-sm mx-auto">
+                    <img src="img/cama.png" alt="Cama" class="w-full h-56 object-contain" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-red-600" data-key="prod_cama">Cama</h3>
+                        <p class="text-parrafo text-sm" data-key="prod_cama_desc">Estructura de cama resistente con somier de listones y una cabecera multifuncional que incluye prácticos compartimentos para organizar tus objetos.</p>
+                        <button type="button" onclick="abrirCotizador('Cama')" class="mt-3 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 transition" data-key="btn_cotizar">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="max-w-7xl mx-auto px-4 py-10 bg-gray-50 transition-colors duration-300">
+            <h2 class="text-3xl md:text-4xl font-bold text-center border-b-4 border-red-600 inline-block pb-2 mb-6 w-full" data-key="tit_testimonios">Testimonios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-caja p-6 rounded-lg shadow">
+                    <p class="text-parrafo italic" data-key="testimonio1">"Excelente calidad, la mesa que pedí superó mis expectativas. Muy profesionales y atentos."</p>
+                    <p class="mt-4 font-bold text-red-600" data-key="testimonio1_autor">— Juan Pérez</p>
+                </div>
+                <div class="bg-caja p-6 rounded-lg shadow">
+                    <p class="text-parrafo italic" data-key="testimonio2">"Compré un ropero y estoy encantado. El diseño y los acabados son impecables."</p>
+                    <p class="mt-4 font-bold text-red-600" data-key="testimonio2_autor">— María López</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="max-w-4xl mx-auto px-4 py-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center border-b-4 border-red-600 inline-block pb-2 mb-4 w-full" data-key="tit_reserva">Reserva tu Pedido</h2>
+            <p class="text-center text-parrafo mb-5" data-key="reserva_desc">Cuéntanos qué mueble necesitas y te contactaremos para coordinar los detalles.</p>
+
+            <form id="form-reserva" class="space-y-4 max-w-xl mx-auto">
+                <div>
+                    <label for="reserva-nombre" class="block font-medium text-oscuro" data-key="lbl_nombre">Nombre completo:</label>
+                    <input type="text" id="reserva-nombre" placeholder="Ej. Carlos Vega" class="w-full border border-gray-300 rounded px-3 py-2 bg-sitio text-oscuro focus:ring-2 focus:ring-red-400 outline-none transition">
+                    <span class="error-texto" id="err-reserva-nombre" data-key="err_nombre">Ingresa un nombre válido.</span>
+                </div>
+                <div>
+                    <label for="reserva-correo" class="block font-medium text-oscuro" data-key="lbl_correo">Correo electrónico:</label>
+                    <input type="email" id="reserva-correo" placeholder="ejemplo@correo.com" class="w-full border border-gray-300 rounded px-3 py-2 bg-sitio text-oscuro focus:ring-2 focus:ring-red-400 outline-none transition">
+                    <span class="error-texto" id="err-reserva-correo" data-key="err_correo">Debes ingresar un correo válido que contenga '@'.</span>
+                </div>
+                <div>
+                    <label for="reserva-mueble" class="block font-medium text-oscuro" data-key="lbl_mueble">Tipo de mueble:</label>
+                    <select id="reserva-mueble" class="w-full border border-gray-300 rounded px-3 py-2 bg-sitio text-oscuro focus:ring-2 focus:ring-red-400 outline-none transition">
+                        <option value="" data-key="opt_seleccionar">Selecciona una opción</option>
+                        <option value="Sala" data-key="opt_sala">Sala</option>
+                        <option value="Comedor" data-key="opt_comedor">Comedor</option>
+                        <option value="Dormitorio" data-key="opt_dormitorio">Dormitorio</option>
+                        <option value="Otro" data-key="opt_otro">Otro</option>
+                    </select>
+                    <span class="error-texto" id="err-reserva-mueble" data-key="err_obligatorio">Este campo es obligatorio.</span>
+                </div>
+                <div>
+                    <label for="reserva-detalle" class="block font-medium text-oscuro" data-key="lbl_detalles">Detalles:</label>
+                    <textarea id="reserva-detalle" rows="3" placeholder="Describe el mueble, medidas o acabado que deseas" class="w-full border border-gray-300 rounded px-3 py-2 bg-sitio text-oscuro focus:ring-2 focus:ring-red-400 outline-none transition"></textarea>
+                    <span class="error-texto" id="err-reserva-detalle" data-key="err_obligatorio">Este campo es obligatorio.</span>
+                </div>
+                <div>
+                    <label for="reserva-telefono" class="block font-medium text-oscuro" data-key="lbl_tel">Teléfono:</label>
+                    <input type="tel" id="reserva-telefono" maxlength="9" placeholder="987654321" class="w-full border border-gray-300 rounded px-3 py-2 bg-sitio text-oscuro focus:ring-2 focus:ring-red-400 outline-none transition">
+                    <span class="error-texto" id="err-reserva-telefono" data-key="err_tel">Ingresa un teléfono válido de 9 dígitos.</span>
+                </div>
+                <button type="button" class="w-full bg-red-600 text-white font-bold py-2 rounded hover:bg-red-700 transition" onclick="enviarReserva()" data-key="btn_enviar_reserva">Enviar Reserva</button>
+                <button type="button" id="abrir-cotizador" class="w-full mt-3 border border-red-600 text-red-600 font-bold py-2 rounded hover:bg-red-600 hover:text-white transition" data-key="btn_cotizador_reserva">Abrir cotizador</button>
+            </form>
+
+            <div class="mt-8 text-center max-w-xl mx-auto">
+                <p class="text-oscuro"><span class="font-bold" data-key="cont_dir">Dirección:</span> Psje. Los Pinos S/N C.P. San Ignacio, Trujillo</p>
+                <p class="text-oscuro"><span class="font-bold" data-key="cont_tel">Teléfono:</span> 948 728 508</p>
+            </div>
+        </section>
+
+        <section id="taller" class="max-w-7xl mx-auto px-4 py-10 bg-gray-50 transition-colors duration-300">
+            <h2 class="text-3xl md:text-4xl font-bold text-center border-b-4 border-red-600 inline-block pb-2 mb-6 w-full" data-key="tit_taller">Nuestro Taller</h2>
+            <p class="text-center text-parrafo mb-5 max-w-3xl mx-auto" data-key="desc_taller">Conoce las máquinas y herramientas que utilizamos para crear tus muebles con precisión y calidad.</p>
+
+            <h3 class="text-2xl font-semibold text-red-600 mb-3 text-center" data-key="tit_maquinas">Máquinas Industriales</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 grid-cards-center">
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/circular.png" alt="Sierra Circular" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_1_tit">Sierra Circular</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_1_desc">Fundamental para realizar cortes longitudinales y transversales precisos en madera maciza. Optimiza el tiempo y garantiza exactitud en el despiece.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/desgrosadora.png" alt="Desgrosadora" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_2_tit">Desgrosadora</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_2_desc">Calibra la madera dándole un grosor exacto y paralelo. Esencial para obtener piezas uniformes listas para un ensamblaje perfecto.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/garlopa.png" alt="Garlopa" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_3_tit">Garlopa</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_3_desc">Crea una superficie perfectamente plana y un canto a 90 grados. Es el primer paso crucial antes de regruesar cualquier pieza.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/torno.png" alt="Torno" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_4_tit">Torno</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_4_desc">Permite tornear y esculpir piezas cilíndricas, ideal para fabricar patas de mesas, sillas y elementos decorativos con acabados artesanales.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/sierra_cinta.png" alt="Sierra de Cinta" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_5_tit">Sierra de Cinta</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_5_desc">Ofrece una versatilidad excepcional para realizar cortes curvos, perfiles irregulares y reaserrado de piezas con gran precisión.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/tupi.png" alt="Tupi" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="maq_6_tit">Máquina Tupi</h4>
+                        <p class="text-parrafo text-sm" data-key="maq_6_desc">Moldea perfiles, ranuras y molduras decorativas en los cantos de la madera, aportando un acabado profesional y elegante a cada mueble.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-red-600 mb-3 text-center" data-key="tit_herramientas">Herramientas Manuales</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 grid-cards-center">
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/formones.png" alt="Formones" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="herr_1_tit">Herramienta Formones</h4>
+                        <p class="text-parrafo text-sm" data-key="herr_1_desc">Herramientas de precisión indispensables para realizar tallados, ajustes manuales y ensambles tradicionales (como cajas y espigas).</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/escuadras.png" alt="Escuadras" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="herr_2_tit">Herramienta Escuadras</h4>
+                        <p class="text-parrafo text-sm" data-key="herr_2_desc">Instrumento de comprobación vital para garantizar la perpendicularidad y el trazado exacto a 90° y 45° en la construcción del mueble.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/serrucho.png" alt="Serrucho" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="herr_3_tit">Herramienta Serrucho</h4>
+                        <p class="text-parrafo text-sm" data-key="herr_3_desc">Herramienta clásica de corte manual, perfecta para ajustes rápidos y trabajos donde se requiere el tacto y control del carpintero.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/cinta_metrica.png" alt="Cinta métrica" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="herr_4_tit">Cinta Métrica</h4>
+                        <p class="text-parrafo text-sm" data-key="herr_4_desc">Elemento básico de medición que asegura la precisión absoluta en el marcado, despiece y montaje de las estructuras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-red-600 mb-3 text-center" data-key="tit_epps">Equipos de Protección</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center grid-cards-center">
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/botas.png" alt="Botas" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="epp_1_tit">Botas de Seguridad</h4>
+                        <p class="text-parrafo text-sm" data-key="epp_1_desc">Equipadas con puntera reforzada y suela antideslizante, brindan protección esencial contra la caída de madera pesada y herramientas.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/casco.png" alt="Casco" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="epp_2_tit">Casco de Protección</h4>
+                        <p class="text-parrafo text-sm" data-key="epp_2_desc">Garantiza la seguridad craneal del artesano ante posibles golpes accidentales o caída de materiales en zonas de almacenamiento.</p>
+                    </div>
+                </div>
+                <div class="bg-caja rounded-lg shadow-md overflow-hidden tarjeta-taller">
+                    <div class="h-48 flex items-center justify-center p-4 bg-gray-100 transition-colors duration-300">
+                        <img src="img/mascara.png" alt="Mascarilla" class="max-h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-red-600" data-key="epp_3_tit">Mascarilla Protectora</h4>
+                        <p class="text-parrafo text-sm" data-key="epp_3_desc">Filtra eficazmente el aserrín, las partículas finas y los vapores de barnices, cuidando la salud respiratoria durante toda la jornada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="ventana-cotizador" class="modal">
+        <div class="modal-caja modal-cotizador">
+            <button type="button" id="cerrar-cotizador" class="btn-cerrar">X</button>
+            <div class="text-center mb-3">
+                <h2 class="titulo-azul" data-key="tit_cotizador">Cotizador de Muebles</h2>
+                <p class="text-sm text-parrafo">Calcula precios rápidos para tus proyectos de madera.</p>
+            </div>
+            <form class="formulario">
+                <div class="campo">
+                    <label for="cot-mueble" data-key="lbl_cot_mueble">Mueble:</label>
+                    <select id="cot-mueble">
+                        <option value="350" data-key="cot_opt_mesa">Mesa</option>
+                        <option value="400" data-key="cot_opt_escritorio">Escritorio</option>
+                        <option value="250" data-key="cot_opt_puerta">Puerta</option>
+                        <option value="600" data-key="cot_opt_vitrina">Vitrina</option>
+                        <option value="450" data-key="cot_opt_comoda">Cómoda</option>
+                        <option value="500" data-key="cot_opt_cama">Cama</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cot-madera" data-key="lbl_cot_madera">Madera:</label>
+                    <select id="cot-madera">
+                        <option value="1.2">Cedro</option>
+                        <option value="0.8">Pino</option>
+                        <option value="0.6">Melamine</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cot-ancho" data-key="lbl_cot_ancho">Ancho (cm):</label>
+                    <input type="text" id="cot-ancho" maxlength="4" placeholder="Ej. 120">
+                </div>
+                <div class="campo">
+                    <label for="cot-alto" data-key="lbl_cot_alto">Alto (cm):</label>
+                    <input type="text" id="cot-alto" maxlength="4" placeholder="Ej. 80">
+                </div>
+                <button type="button" class="boton" onclick="agregarCotizacion()" data-key="btn_agregar_cot">Agregar a la cotización</button>
+            </form>
+            <div class="cotizador-tabla-wrap">
+                <table id="tabla-cotizacion">
+                    <thead>
+                        <tr>
+                            <th data-key="th_mueble">Mueble</th>
+                            <th data-key="th_madera">Madera</th>
+                            <th data-key="th_medidas">Medidas</th>
+                            <th data-key="th_precio">Precio</th>
+                            <th data-key="th_accion">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cotizador-acciones">
+                <h3 class="texto-total-cotizador"><span data-key="txt_total">Total: S/</span> <label id="cot-total">0.00</label></h3>
+                <div class="flex flex-col sm:flex-row gap-2 w-full justify-center">
+                    <button type="button" class="boton boton-cotizador-secundario" onclick="limpiarCotizacion()">Limpiar</button>
+                    <button type="button" class="boton" onclick="guardarCotizacion()" data-key="btn_guardar_cot">Guardar cotización</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ventana-login" class="modal">
+        <div class="modal-caja texto-centrado">
+            <button type="button" id="cerrar-login" class="btn-cerrar">X</button>
+            <h2 class="titulo-azul" data-key="tit_login">Iniciar Sesión</h2>
+            <p data-key="desc_login">Ingresa usando tus redes sociales</p>
+            <button type="button" class="boton-social btn-google" id="api-google" data-key="btn_google">Continuar con Google</button>
+            <button type="button" class="boton-social btn-facebook" id="api-facebook" data-key="btn_facebook">Continuar con Facebook</button>
+        </div>
+    </div>
+
+    <div id="ventana-compartir" class="modal">
+        <div class="modal-caja texto-centrado">
+            <button type="button" id="cerrar-compartir" class="btn-cerrar">X</button>
+            <h2 class="titulo-azul" data-key="tit_compartir">Compartir Página</h2>
+            <p data-key="desc_compartir">Escanea el código QR o comparte directamente en tus redes.</p>
+            <img id="qr-img" src="img/logo.svg" alt="Código QR" class="imagen-qr">
+            <button type="button" id="btn-descargar-qr" class="boton mt-2 mb-4" style="background-color: #333;">
+                <i class="fas fa-download"></i> Descargar QR
+            </button>
+            <a id="share-wa" href="#" target="_blank" class="boton-social btn-whatsapp" data-key="btn_wa">Compartir en WhatsApp</a>
+            <a id="share-fb" href="#" target="_blank" class="boton-social btn-facebook" data-key="btn_fb">Compartir en Facebook</a>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col items-center text-center">
+                <h3 class="font-bold text-red-500">Carpintería Vereau</h3>
+                <p class="text-sm">Psje. Los Pinos S/N, San Ignacio, Trujillo</p>
+                <p class="text-sm">948 728 508</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <h3 class="font-bold text-red-500">Enlaces</h3>
+                <ul class="text-sm space-y-1 mt-2">
+                    <li><a href="#inicio" class="hover:underline" data-key="nav_inicio">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:underline" data-key="nav_nosotros">Nosotros</a></li>
+                    <li><a href="#catalogo" class="hover:underline" data-key="nav_catalogo">Catálogo</a></li>
+                    <li><a href="#testimonios" class="hover:underline" data-key="nav_testimonios">Testimonios</a></li>
+                    <li><a href="#contacto" class="hover:underline" data-key="nav_contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <h3 class="font-bold text-red-500">Síguenos</h3>
+                <div class="flex space-x-4 text-2xl mt-2">
+                    <a href="#" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-red-500"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm border-t border-gray-700 mt-6 pt-4">
+            <p data-key="foot_autor">De: Julio C. Vereau Gerónimo</p>
+            <p data-key="foot_der">&copy; 2026 Carpintería Vereau. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
