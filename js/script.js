@@ -537,8 +537,8 @@ document.getElementById('cerrar-login').addEventListener('click', function () {
 document.getElementById('btn-compartir').addEventListener('click', function (e) {
     e.preventDefault();
     let urlActual = window.location.href;
-    let textoPersonalizado = "Visita mi página de Carpintería Vereau: " + urlActual;
-    let urlLogoPublico = "https://tu-usuario.github.io/tu-repositorio/img/logo.jpg";
+    let textoPersonalizado = "Visita mi página de Carpintería Vereau: " + "https://nicksonvereau.github.io/";
+    let urlLogoPublico = "https://nicksonvereau.github.io/img/logo-qr.jpg";
     let qrUrl = `https://quickchart.io/qr?text=${encodeURIComponent(urlActual)}&size=300&centerImageUrl=${encodeURIComponent(urlLogoPublico)}`;
     
     document.getElementById('qr-img').src = qrUrl;
